@@ -1,0 +1,22 @@
+﻿<Window x:Class="VimbHistory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VimbHistory"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="391*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="DealTB" HorizontalAlignment="Left" Height="20" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Grid.Column="1"
+        CommandManager.PreviewExecuted="DealTB_PreviewExecuted" ContextMenu="{x:Null}">
+        </TextBox>
+        <Button x:Name="LoadButton" Content="Load" HorizontalAlignment="Left" Height="20" Margin="155,18,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.316,0.25" Grid.Column="1" Click="LoadButton_Click"/>
+        <DataGrid x:Name="ResultGrid" HorizontalAlignment="Left" Height="358" Margin="0,55,0,0" VerticalAlignment="Top" Width="772" Grid.Column="1" IsReadOnly="True"
+        ColumnWidth="*"   />
+
+    </Grid>
+</Window>
